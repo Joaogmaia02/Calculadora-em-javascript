@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <!-- criando o back-end (lógica) da calculadora -->
+    <script src="script.js"></script>
+
+    <!-- criando a estilização da calculadora -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      #calculadora {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- criando a interface da calculadora -->
+    <div id="calculadora">
+      <input type="text" id="tela" readonly />
+      <div>
+        <button onclick="adicionarNumero(7)">7</button>
+        <button onclick="adicionarNumero(8)">8</button>
+        <button onclick="adicionarNumero(9)">9</button>
+        <button onclick="limparTela()">C</button>
+      </div>
+      <div>
+        <button onclick="adicionarNumero(4)">4</button>
+        <button onclick="adicionarNumero(5)">5</button>
+        <button onclick="adicionarNumero(6)">6</button>
+        <button onclick="realizarOperacao('+')">+</button>
+      </div>
+      <div>
+        <button onclick="adicionarNumero(1)">1</button>
+        <button onclick="adicionarNumero(2)">2</button>
+        <button onclick="adicionarNumero(3)">3</button>
+        <button onclick="realizarOperacao('-')">-</button>
+      </div>
+      <div>
+        <button onclick="adicionarNumero(0)">0</button>
+        <button onclick="adicionarDecimal()">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="realizarOperacao('*')">*</button>
+      </div>
+      <div>
+        <button onclick="realizarOperacao('/')">/</button>
+        <button onclick="calcularPorcentagem()">%</button>
+        <button onclick="calcularRaizQuadrada()">√</button>
+      </div>
+    </div>
+  </body>
+</html>
